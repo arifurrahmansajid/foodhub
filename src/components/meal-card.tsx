@@ -23,7 +23,7 @@ export function MealCard(props) {
   }
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden h-full flex flex-col">
       <div className="relative aspect-video">
         <div className="absolute inset-0 z-10 bg-black/20" />
         <img
@@ -32,7 +32,7 @@ export function MealCard(props) {
           className="h-full w-full object-cover"
         />
       </div>
-      <CardHeader>
+      <CardHeader className="flex-1">
         <CardAction>
           <p>${meal.price}</p>
         </CardAction>
