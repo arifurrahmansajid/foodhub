@@ -43,19 +43,28 @@ export function LoginForm() {
       onSubmit: loginSchema,
     },
     onSubmit: async ({ value }) => {
-        const data = await authClient.signIn.email({
-        email : value.email,
+      const data = await authClient.signIn.email({
+        email: value.email,
         password: value.password
       });
 
-        if (data.error === null) {
-          toast.success("Logged in successfully")
-          router.push('/');
-          router.refresh();
+      if (data.error === null) {
+        toast.success("Logged in successfully");
+
+        const role = (data.data.user as any).role;
+        if (role === "ADMIN") {
+          router.push('/dashboard/admin/users');
+        } else if (role === "PROVIDER") {
+          router.push('/dashboard/provider/menu');
         } else {
-          toast.error(data.error.message);
-          form.reset();
+          router.push('/dashboard');
         }
+
+        router.refresh();
+      } else {
+        toast.error(data.error.message);
+        form.reset();
+      }
     },
   })
 
