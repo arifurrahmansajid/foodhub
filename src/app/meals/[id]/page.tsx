@@ -46,7 +46,7 @@ export default function MealDetailPage() {
   if (!meal) return <div className="p-6">Meal not found</div>;
 
   return (
-    <section className="container py-8 px-4 sm:px-6 lg:px-12">
+    <section className="container max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-12">
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="overflow-hidden rounded-xl border">
           <img
