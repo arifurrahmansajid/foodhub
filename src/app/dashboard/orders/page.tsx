@@ -5,10 +5,10 @@ export default async function OrdersPage() {
     const orders = await getOrders() ?? [];
 
     return (
-        <section className="container py-10">
-            <div className="mb-6">
-                <h1 className="text-3xl font-bold">My Orders</h1>
-                <p className="mt-2 text-muted-foreground">
+        <section className="container max-w-7xl mx-auto py-10">
+            <div className="mb-8 text-center">
+                <h1 className="text-4xl font-bold tracking-tight">My Orders</h1>
+                <p className="mt-3 text-lg text-muted-foreground">
                     Track your recent orders and view details.
                 </p>
             </div>
