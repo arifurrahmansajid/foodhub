@@ -24,7 +24,7 @@ export function MealCard(props) {
 
   return (
     <Card className="overflow-hidden h-full flex flex-col">
-      <div className="relative aspect-video">
+      <div className="relative h-48 w-full">
         <div className="absolute inset-0 z-10 bg-black/20" />
         <img
           src={meal.image_url || "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop"}

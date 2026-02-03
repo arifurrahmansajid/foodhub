@@ -9,12 +9,12 @@ export default async function ProviderDetailsPage({
 }: {
   params: Promise<{ id: string }>
 }) {
-    const {id} = await params;
-    const provider = await providerService.getSingleProvider(id);
-    const meals = await provider.meals;
-    console.log(provider);
+  const { id } = await params;
+  const provider = await providerService.getSingleProvider(id);
+  const meals = await provider.meals;
+  console.log(provider);
   return (
-    <section className="container py-10 px-4 sm:px-6 lg:px-12">
+    <section className="container mx-auto max-w-7xl py-10 px-4 sm:px-6 lg:px-12">
       {/* Provider Info */}
       <Card>
         <CardHeader className="pb-3">
