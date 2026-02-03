@@ -34,13 +34,15 @@ export function ProviderMealCard(props) {
     };
 
     return (
-        <Card className="relative mx-auto w-full max-w-sm pt-0">
-            <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-            <img
-                src={meal.image_url}
-                alt="Meal Cover"
-                className="relative z-20 aspect-video w-full object-cover "
-            />
+        <Card className="overflow-hidden">
+            <div className="relative aspect-video">
+                <div className="absolute inset-0 z-10 bg-black/20" />
+                <img
+                    src={meal.image_url || "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop"}
+                    alt={meal.name}
+                    className="h-full w-full object-cover"
+                />
+            </div>
             <CardHeader>
                 <CardAction>
                     <p>${meal.price}</p>

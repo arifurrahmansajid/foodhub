@@ -9,9 +9,22 @@ import { useEffect, useState } from 'react';
 import { authClient } from '@/lib/auth-client';
 import { categoryService } from '@/service/category.service';
 
+type Meal = {
+  id: string;
+  name: string;
+  details: string;
+  price: number;
+  image_url: string | null;
+  providerId: string;
+  provider: {
+    shopName: string;
+  };
+  reviews: any[];
+}
+
 export default function MealDetailPage() {
   const { id } = useParams();
-  const [meal, setMeal] = useState(null);
+  const [meal, setMeal] = useState<Meal | null>(null);
   const [loading, setLoading] = useState(true);
 
   const session = authClient.useSession();
@@ -37,7 +50,7 @@ export default function MealDetailPage() {
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="overflow-hidden rounded-xl border">
           <img
-            src={meal.image_url}
+            src={meal.image_url || "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop"}
             alt={meal.name}
             className="aspect-video w-full object-cover"
           />
