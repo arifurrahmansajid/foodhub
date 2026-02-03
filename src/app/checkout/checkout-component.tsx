@@ -74,7 +74,7 @@ export function CheckoutComponent({ user, address }) {
     }
 
     return (
-        <div className="container max-w-3xl space-y-6">
+        <div className="container max-w-3xl mx-auto space-y-6">
             {/* Page Title */}
             <h1 className="text-3xl font-semibold">Checkout</h1>
 
