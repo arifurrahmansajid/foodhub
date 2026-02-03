@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <div className="w-full">
       <HeroSection />
-      <div className="container py-10">
-        <FeaturedMeals/>
-        <FeaturedProviders/>
+      <div className="container max-w-7xl mx-auto py-10">
+        <FeaturedMeals />
+        <FeaturedProviders />
         <TrustSection />
       </div>
     </div>
