@@ -83,10 +83,10 @@ const Footer2 = ({
   ],
 }: Footer2Props) => {
   return (
-    <section className={cn("py-24", className)}>
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section className={cn("py-16 sm:py-24 bg-muted/30", className)}>
+      <div className="container max-w-7xl mx-auto">
         <footer>
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-8 md:gap-12 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 lg:justify-start">
                   {/* Logo Goes Here */}
@@ -109,7 +109,7 @@ const Footer2 = ({
               </div>
             ))}
           </div>
-          <div className="mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
+          <div className="mt-12 sm:mt-16 flex flex-col justify-between gap-6 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
             <p>{copyright}</p>
             <ul className="flex gap-4">
               {bottomLinks.map((link, linkIdx) => (

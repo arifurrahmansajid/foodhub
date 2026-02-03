@@ -47,8 +47,8 @@ export default function BecomeProviderPage() {
   })
 
   return (
-    <section className="container py-10">
-      <div className="mx-auto w-full max-w-md">
+    <section className="flex min-h-screen items-center justify-center bg-muted/30 py-10">
+      <div className="w-full max-w-md">
         <Card>
           <CardHeader>
             <CardTitle>Become a provider</CardTitle>

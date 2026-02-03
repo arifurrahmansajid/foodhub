@@ -5,11 +5,13 @@ import { TrustSection } from "@/components/trust-section";
 
 export default function Home() {
   return (
-    <div className="container py-10 px-4 sm:px-6 lg:px-12">
+    <div className="w-full">
       <HeroSection />
-      <FeaturedMeals/>
-      <FeaturedProviders/>
-      <TrustSection />
+      <div className="container py-10">
+        <FeaturedMeals/>
+        <FeaturedProviders/>
+        <TrustSection />
+      </div>
     </div>
   );
 }

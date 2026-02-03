@@ -7,11 +7,11 @@ import Link from 'next/link'
 export default async function ProvidersPage() {
     const providers = await providerService.getAllProviders();
     return (
-        <section className="container py-10 px-4 sm:px-6 lg:px-12">
+        <section className="container max-w-7xl mx-auto py-10">
             {/* Header */}
             <div className="mb-8">
-                <h1 className="text-3xl font-bold tracking-tight">Explore Providers</h1>
-                <p className="mt-2 text-muted-foreground">
+                <h1 className="text-4xl font-bold tracking-tight">Explore Providers</h1>
+                <p className="mt-3 text-lg text-muted-foreground">
                     Choose a kitchen and explore their meals
                 </p>
             </div>

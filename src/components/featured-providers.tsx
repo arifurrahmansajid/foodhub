@@ -16,10 +16,10 @@ export async function FeaturedProviders() {
     const featuredProviders = res.slice(0, 5);
 
     return (
-        <section className="border-b">
-            <div className="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-                <div className="mb-6 flex items-center justify-between">
-                    <h2 className="text-2xl font-semibold tracking-tight">
+        <section className="border-b bg-muted/30">
+            <div className="container max-w-7xl mx-auto py-12 sm:py-16">
+                <div className="mb-8 flex items-center justify-between">
+                    <h2 className="text-3xl font-bold tracking-tight">
                         Featured Providers
                     </h2>
                 </div>

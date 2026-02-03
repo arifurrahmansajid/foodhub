@@ -33,10 +33,10 @@ export default async function MealsPage({
   const categories = await categoryService.getAllCategories();
   
   return (
-        <section className="container py-10 px-4 sm:px-6 lg:px-12">
+        <section className="container max-w-7xl mx-auto py-10">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">Explore Meals</h1>
-        <p className="mt-2 text-muted-foreground">
+        <h1 className="text-4xl font-bold tracking-tight">Explore Meals</h1>
+        <p className="mt-3 text-lg text-muted-foreground">
           Fresh, home-made meals from trusted providers
         </p>
       </div>

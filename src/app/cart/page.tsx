@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function CartPage() {
   return (
-    <div className='flex min-h-screen items-center justify-center bg-muted/40 px-4'>
+    <section className='flex min-h-screen items-center justify-center bg-muted/30 py-10'>
 
         <ShoppingCart/>
-    </div>
+    </section>
   )
 }

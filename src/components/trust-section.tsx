@@ -5,18 +5,18 @@ import { Button } from "@/components/ui/button"
 
 export function TrustSection() {
   return (
-    <section className="border-t">
-      <div className="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <section className="border-t bg-muted/20">
+      <div className="container max-w-7xl mx-auto py-12 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Why FoodHub?
           </h2>
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
             Simple, safe, and reliable home-cooked meals — from kitchens you can trust.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardContent className="p-6">
               <div className="flex items-start gap-4">

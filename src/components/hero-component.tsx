@@ -7,20 +7,20 @@ import { Input } from "@/components/ui/input"
 
 export function HeroSection() {
   return (
-    <section className="border-b">
-      <div className="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+    <section className="border-b bg-gradient-to-b from-background to-muted/20">
+      <div className="container max-w-7xl mx-auto py-12 sm:py-20">
+        <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
           {/* Left: Copy */}
           <div className="flex flex-col gap-5">
             {/* <Badge className="w-fit" variant="secondary">
               Fresh • Home-made • Delivered
             </Badge> */}
 
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl leading-tight">
               Home-cooked meals from local kitchens, delivered to you.
             </h1>
 
-            <p className="text-base text-muted-foreground sm:text-lg">
+            <p className="text-lg text-muted-foreground sm:text-xl leading-relaxed">
               Discover meals made by trusted providers. Order in minutes — warm,
               tasty, and affordable.
             </p>

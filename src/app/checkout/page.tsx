@@ -22,7 +22,7 @@ const CheckoutPage = async () => {
     const total = 46.0;
 
     return (
-        <section className="flex min-h-screen items-center justify-center bg-muted/40 px-4">
+        <section className="flex min-h-screen items-center justify-center bg-muted/30 py-10">
             <CheckoutComponent
                 user={user}
                 address={address}
