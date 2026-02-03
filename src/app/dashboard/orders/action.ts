@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 export async function getOrders() {
   const cookieStore = await cookies();
 
-  const res = await fetch("http://localhost:5000/api/orders", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders`, {
     method: "GET",
     headers: {
       Cookie: cookieStore.toString(),
@@ -20,7 +20,7 @@ export async function getOrders() {
 export async function cancelOrder(orderId) {
   const cookieStore = await cookies();
 
-  const res = await fetch(`http://localhost:5000/api/orders/cancel/${orderId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/cancel/${orderId}`, {
     method: "PUT",
     headers: {
       Cookie: cookieStore.toString(),
@@ -34,7 +34,7 @@ export async function cancelOrder(orderId) {
 export async function updateOrderStatus(orderId, data) {
   const cookieStore = await cookies();
 
-  const res = await fetch(`http://localhost:5000/api/provider/orders/${orderId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/provider/orders/${orderId}`, {
     method: "PUT",
     headers: {
       Cookie: cookieStore.toString(),
@@ -51,7 +51,7 @@ export async function updateOrderStatus(orderId, data) {
 export async function getOrderDetails(orderId) {
   const cookieStore = await cookies();
 
-  const res = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/${orderId}`, {
     method: "GET",
     headers: {
       Cookie: cookieStore.toString(),

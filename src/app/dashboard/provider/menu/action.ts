@@ -5,36 +5,36 @@ import { cookies } from "next/headers";
 
 
 export async function getMealsForCurrentProvider() {
-    const cookieStore = await cookies();
+  const cookieStore = await cookies();
 
 
-    const provider = await fetch("http://localhost:5000/api/providers/me", {
-        headers: {
-            Cookie: cookieStore.toString(),
-        },
-        cache: "no-store",
-    });
+  const provider = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/providers/me`, {
+    headers: {
+      Cookie: cookieStore.toString(),
+    },
+    cache: "no-store",
+  });
 
-    const providerData = await provider.json();
+  const providerData = await provider.json();
 
-    const data = await fetch(`http://localhost:5000/api/providers/${providerData.id}`, {
-        headers: {
-            Cookie: cookieStore.toString(),
-        },
-        cache: "no-store",
-    });
-    
-    const result = await data.json();
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/providers/${providerData.id}`, {
+    headers: {
+      Cookie: cookieStore.toString(),
+    },
+    cache: "no-store",
+  });
 
-    return result.meals;
+  const result = await data.json();
+
+  return result.meals;
 }
 
 export async function deleteMealAction(mealId: string) {
-    
-const cookieStore = await cookies();
 
-    
-  const res = await fetch(`http://localhost:5000/api/provider/meals/${mealId}`, {
+  const cookieStore = await cookies();
+
+
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/provider/meals/${mealId}`, {
     method: "DELETE",
     headers: {
       Cookie: cookieStore.toString(),
